@@ -1,0 +1,20 @@
+package softuni.exam.service;
+
+import softuni.exam.models.entity.Town;
+
+import java.io.IOException;
+import java.util.Optional;
+
+
+public interface TownService {
+
+    boolean areImported();
+
+    String readTownsFileContent() throws IOException;
+	
+	String importTowns() throws IOException;
+
+    void saveValidTown(Town town);
+
+    Optional<Town> findTownByTownName(String townName);
+}
